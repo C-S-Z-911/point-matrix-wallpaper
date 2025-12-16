@@ -1,0 +1,311 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "排斥式交互点阵 (可通过图像修改点阵样式)",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"animation_speed" : 
+			{
+				"fraction" : false,
+				"index" : 6,
+				"max" : 1000,
+				"min" : 0,
+				"order" : 106,
+				"text" : "动画速度",
+				"type" : "slider",
+				"value" : 500
+			},
+			"arknights_endfield_json" : 
+			{
+				"condition" : "parent_path.value == 'arknights_endfield_json' && custom_points.value == 0",
+				"index" : 19,
+				"options" : 
+				[
+					{
+						"label" : "终末地工业",
+						"value" : "终末地工业logo.json"
+					},
+					{
+						"label" : "明日方舟终末地-zh",
+						"value" : "明日方舟终末地logo-zh.json"
+					}
+				],
+				"order" : 119,
+				"text" : "明日方舟:终末地</br>(自制)",
+				"type" : "combo",
+				"value" : "终末地工业logo.json"
+			},
+			"arknights_json" : 
+			{
+				"condition" : "parent_path.value == 'arknights_json' && custom_points.value == 0",
+				"index" : 18,
+				"options" : 
+				[
+					{
+						"label" : "罗德岛",
+						"value" : "罗德岛.json"
+					},
+					{
+						"label" : "龙门",
+						"value" : "龙门.json"
+					},
+					{
+						"label" : "整合运动",
+						"value" : "整合运动.json"
+					},
+					{
+						"label" : "莱茵生命",
+						"value" : "莱茵生命.json"
+					},
+					{
+						"label" : "企鹅物流",
+						"value" : "企鹅物流.json"
+					},
+					{
+						"label" : "移动城邦",
+						"value" : "移动城邦.json"
+					},
+					{
+						"label" : "源石",
+						"value" : "源石.json"
+					},
+					{
+						"label" : "源石技艺",
+						"value" : "源石技艺.json"
+					},
+					{
+						"label" : "罗德岛(胸牌)",
+						"value" : "罗德岛(胸牌).json"
+					},
+					{
+						"label" : "感染者",
+						"value" : "感染者.json"
+					},
+					{
+						"label" : "01-INFORMATION",
+						"value" : "01-INFORMATION.json"
+					},
+					{
+						"label" : "04-MEDIA",
+						"value" : "04-MEDIA.json"
+					}
+				],
+				"order" : 118,
+				"text" : "明日方舟",
+				"type" : "combo",
+				"value" : "罗德岛.json"
+			},
+			"background_image" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "背景图片",
+				"type" : "file",
+				"value" : ""
+			},
+			"custom_points" : 
+			{
+				"index" : 13,
+				"order" : 113,
+				"text" : "自定义粒子",
+				"type" : "bool",
+				"value" : false
+			},
+			"debug" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "Debug",
+				"type" : "bool",
+				"value" : false
+			},
+			"debug_color" : 
+			{
+				"condition" : "debug.value == 1",
+				"index" : 2,
+				"order" : 102,
+				"text" : "Debug颜色",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"image" : 
+			{
+				"condition" : "custom_points.value == 1",
+				"index" : 16,
+				"order" : 116,
+				"text" : "<font color ='orange'>请尽量使用单色 透明背景的Logo</br>并将粒子数量控制在1万以内</br>以达到最佳使用效果.</font>",
+				"type" : "text"
+			},
+			"image_path" : 
+			{
+				"condition" : "custom_points.value == 1",
+				"index" : 15,
+				"order" : 115,
+				"text" : "图片路径",
+				"type" : "file",
+				"value" : ""
+			},
+			"mare_tranquillitatis_json" : 
+			{
+				"condition" : "parent_path.value == 'mare_tranquillitatis_json' && custom_points.value == 0",
+				"index" : 20,
+				"options" : 
+				[
+					{
+						"label" : "静海集团(左右)",
+						"value" : "静海集团.json"
+					}
+				],
+				"order" : 120,
+				"text" : "静海集团 (自制)",
+				"type" : "combo",
+				"value" : "静海集团.json"
+			},
+			"parameter" : 
+			{
+				"index" : 3,
+				"order" : 103,
+				"text" : "动画参数",
+				"type" : "group",
+				"value" : ""
+			},
+			"parent_path" : 
+			{
+				"condition" : "custom_points.value == 0",
+				"index" : 17,
+				"options" : 
+				[
+					{
+						"label" : "明日方舟",
+						"value" : "arknights_json"
+					},
+					{
+						"label" : "明日方舟:终末地 (自制)",
+						"value" : "arknights_endfield_json"
+					},
+					{
+						"label" : "静海集团(自制)",
+						"value" : "mare_tranquillitatis_json"
+					}
+				],
+				"order" : 117,
+				"text" : "粒子类型",
+				"type" : "combo",
+				"value" : "arknights_json"
+			},
+			"point_size" : 
+			{
+				"fraction" : false,
+				"index" : 8,
+				"max" : 5,
+				"min" : 1,
+				"order" : 108,
+				"text" : "粒子大小",
+				"type" : "slider",
+				"value" : 1
+			},
+			"points_interval" : 
+			{
+				"fraction" : false,
+				"index" : 9,
+				"max" : 1000,
+				"min" : 1,
+				"order" : 109,
+				"text" : "粒子间距",
+				"type" : "slider",
+				"value" : 100
+			},
+			"points_parameter" : 
+			{
+				"index" : 7,
+				"order" : 107,
+				"text" : "粒子参数",
+				"type" : "group",
+				"value" : ""
+			},
+			"points_style" : 
+			{
+				"index" : 12,
+				"order" : 112,
+				"text" : "粒子样式",
+				"type" : "group",
+				"value" : ""
+			},
+			"repulsion_radius" : 
+			{
+				"fraction" : false,
+				"index" : 5,
+				"max" : 100,
+				"min" : 0,
+				"order" : 105,
+				"text" : "排斥范围",
+				"type" : "slider",
+				"value" : 50
+			},
+			"repulsion_strength" : 
+			{
+				"fraction" : false,
+				"index" : 4,
+				"max" : 100,
+				"min" : 0,
+				"order" : 104,
+				"text" : "排斥强度",
+				"type" : "slider",
+				"value" : 5
+			},
+			"sampling_interval" : 
+			{
+				"condition" : "custom_points.value == 1",
+				"fraction" : false,
+				"index" : 14,
+				"max" : 50,
+				"min" : 1,
+				"order" : 114,
+				"text" : "采样间隔",
+				"type" : "slider",
+				"value" : 3
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"x_offset" : 
+			{
+				"fraction" : false,
+				"index" : 10,
+				"max" : 100,
+				"min" : -100,
+				"order" : 110,
+				"text" : "X方向偏移",
+				"type" : "slider",
+				"value" : 0
+			},
+			"y_offset" : 
+			{
+				"fraction" : false,
+				"index" : 11,
+				"max" : 100,
+				"min" : -100,
+				"order" : 111,
+				"text" : "Y方向偏移",
+				"type" : "slider",
+				"value" : 0
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"ratingsex" : "none",
+	"ratingviolence" : "none",
+	"tags" : [ "Pixel art" ],
+	"title" : "排斥式交互点阵 (可通过图像修改点阵样式)",
+	"type" : "Web",
+	"version" : 1,
+	"visibility" : "public",
+	"workshopid" : "3624878007",
+	"workshopurl" : "steam://url/CommunityFilePage/3624878007"
+}
