@@ -29,6 +29,9 @@ class PointMatrixApp {
     this.mousePointColor = "rgba(255, 255, 255, 0)";
     this.mousePointRadius = 2;
 
+    //粒子数量上限
+    this.particleQuantity = 10000;
+
     // 点阵数据
     this.points = [];
 
@@ -79,7 +82,7 @@ class PointMatrixApp {
 
     this.points = [];
 
-    if (pointsJson.points.length <= 10000) {
+    if (pointsJson.points.length <= this.particleQuantity) {
       this.debugElement.children[3].textContent = "";
       for (let pointData of pointsJson.points) {
         const point = this.getPoint();
@@ -102,7 +105,7 @@ class PointMatrixApp {
       }
     } else {
       this.debugElement.children[3].textContent =
-        "警告:点数量大于10000可能会造成卡顿";
+        `警告:点数量大于最大值${this.particleQuantity}`;
     }
     this.debugElement.children[1].textContent = `粒子数量:${this.points.length}`;
   }

@@ -47,7 +47,7 @@ function pointsDebug(width, height, rgba) {
  */
 async function getJsonData() {
   window.jsonPoints = await fetch(
-    `json/${window.parentPath}/${window.pathAll[window.parentPath]}`
+    `json/${window.parentPath}/${window.pathAll[window.parentPath]}`,
   )
     .then((res) => res.json())
     .then((data) => {
@@ -164,12 +164,17 @@ async function wallpaperMatrix(properties) {
     window.imgPath = properties.image_path.value;
   }
 
+  //粒子数量上限
+  if (properties.particle_quantity) {
+    app.particleQuantity = properties.particle_quantity.value;
+  }
+
   // 执行 从图片获取粒子数据
   if (properties.image_path || properties.sampling_interval) {
     if (window.imgPath != "") {
       window.imgPoints = imageToPoints(
         await loadImage("file:///" + window.imgPath),
-        window.samplingInterval
+        window.samplingInterval,
       );
     }
   }
@@ -188,7 +193,7 @@ async function wallpaperMatrix(properties) {
           const propertiesName = [];
           for (i in data["general"]["properties"]["parent_path"].options) {
             propertiesName.push(
-              data["general"]["properties"]["parent_path"].options[i]["value"]
+              data["general"]["properties"]["parent_path"].options[i]["value"],
             );
           }
           return propertiesName;
@@ -231,7 +236,7 @@ async function wallpaperMatrix(properties) {
       window.pointSize,
       window.pointInterval,
       window.xOffset,
-      window.yOffset
+      window.yOffset,
     );
 
     // 执行后清除定时器引用
